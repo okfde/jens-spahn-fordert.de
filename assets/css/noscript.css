@@ -3,9 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
 /* Header */
-
 body.is-preload #header .content {
   -moz-transform: none;
   -webkit-transform: none;
@@ -13,7 +11,6 @@ body.is-preload #header .content {
   transform: none;
   opacity: 1;
 }
-
 body.is-preload #header .image {
   -moz-transform: none;
   -webkit-transform: none;
@@ -21,7 +18,8 @@ body.is-preload #header .image {
   transform: none;
   opacity: 1;
 }
-
 body.is-preload #header .image img {
   opacity: 1;
 }
+
+/*# sourceMappingURL=noscript.css.map */

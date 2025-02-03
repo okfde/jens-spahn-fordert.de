@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+@import "fontawesome-all.min.css";
 /*
 	Fractal by HTML5 UP
 	html5up.net | @ajlkn
@@ -337,11 +337,9 @@ h6 {
   h2 {
     font-size: 1.25em;
   }
-
   h3 {
     font-size: 1.2em;
   }
-
   h4 {
     font-size: 1em;
   }
@@ -1719,14 +1717,14 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background-color: #5ca3e8;
+  background-color: rgb(92.3578199052, 162.6895734597, 232.1421800948);
 }
 input[type="submit"].primary:active,
 input[type="reset"].primary:active,
 input[type="button"].primary:active,
 button.primary:active,
 .button.primary:active {
-  background-color: #3089e2;
+  background-color: rgb(47.6421800948, 137.3104265403, 225.8578199052);
 }
 
 /* Form */
@@ -2540,7 +2538,7 @@ table a {
 .wrapper {
   padding: 4.5em 0 2.5em 0;
   background-color: #ffffff;
-  border-bottom: solid 2px #eeeeee;
+  border-bottom: solid 2px rgb(237.65, 237.65, 237.65);
 }
 .wrapper > .inner {
   margin-left: auto;
@@ -2548,7 +2546,7 @@ table a {
   width: 50em;
 }
 .wrapper > .inner.alt > * {
-  border-top: solid 2px #eeeeee;
+  border-top: solid 2px rgb(237.65, 237.65, 237.65);
   margin-bottom: 0;
   margin-top: 3em;
   padding-top: 3em;
@@ -2560,7 +2558,7 @@ table a {
 }
 .wrapper.style1 {
   background-color: #4696e5;
-  color: #d1e5f9;
+  color: rgb(208.75, 228.75, 248.5);
 }
 .wrapper.style1 input[type="submit"],
 .wrapper.style1 input[type="reset"],
@@ -2619,7 +2617,7 @@ table a {
 }
 .wrapper.style1 input[type="checkbox"] + label,
 .wrapper.style1 input[type="radio"] + label {
-  color: #d1e5f9;
+  color: rgb(208.75, 228.75, 248.5);
 }
 .wrapper.style1 input[type="checkbox"] + label:before,
 .wrapper.style1 input[type="radio"] + label:before {
@@ -2638,22 +2636,22 @@ table a {
   box-shadow: 0 0 0 1px #ffffff;
 }
 .wrapper.style1 ::-webkit-input-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 .wrapper.style1 :-moz-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 .wrapper.style1 ::-moz-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 .wrapper.style1 :-ms-input-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 .wrapper.style1 .formerize-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 .wrapper.style1 .icon {
-  color: #b5d5f5;
+  color: rgb(181, 213, 244.6);
 }
 .wrapper.style1 .image {
   box-shadow:
@@ -2703,7 +2701,7 @@ table a {
 .wrapper.style1 input,
 .wrapper.style1 select,
 .wrapper.style1 textarea {
-  color: #d1e5f9;
+  color: rgb(208.75, 228.75, 248.5);
 }
 .wrapper.style1 a {
   color: inherit;
@@ -2773,14 +2771,14 @@ table a {
 .wrapper.style2 input[type="button"].primary:hover,
 .wrapper.style2 button.primary:hover,
 .wrapper.style2 .button.primary:hover {
-  background-color: #5ca3e8;
+  background-color: rgb(92.3578199052, 162.6895734597, 232.1421800948);
 }
 .wrapper.style2 input[type="submit"].primary:active,
 .wrapper.style2 input[type="reset"].primary:active,
 .wrapper.style2 input[type="button"].primary:active,
 .wrapper.style2 button.primary:active,
 .wrapper.style2 .button.primary:active {
-  background-color: #3089e2;
+  background-color: rgb(47.6421800948, 137.3104265403, 225.8578199052);
 }
 .wrapper.style2 label {
   color: #828282;
@@ -2963,14 +2961,14 @@ table a {
 .wrapper.style3 input[type="button"].primary:hover,
 .wrapper.style3 button.primary:hover,
 .wrapper.style3 .button.primary:hover {
-  background-color: #5ca3e8;
+  background-color: rgb(92.3578199052, 162.6895734597, 232.1421800948);
 }
 .wrapper.style3 input[type="submit"].primary:active,
 .wrapper.style3 input[type="reset"].primary:active,
 .wrapper.style3 input[type="button"].primary:active,
 .wrapper.style3 button.primary:active,
 .wrapper.style3 .button.primary:active {
-  background-color: #3089e2;
+  background-color: rgb(47.6421800948, 137.3104265403, 225.8578199052);
 }
 .wrapper.style3 label {
   color: #828282;
@@ -3130,7 +3128,6 @@ table a {
     padding: 3em 1.5em 1em 1.5em;
   }
 }
-
 @media screen and (max-width: 480px) and (orientation: landscape) {
   .wrapper {
     padding: 2em 1.5em 0.1em 1.5em;
@@ -3145,7 +3142,7 @@ table a {
 /* Header */
 #header {
   background-color: #4696e5;
-  color: #d1e5f9;
+  color: rgb(208.75, 228.75, 248.5);
   padding: 4.5em 0 2.5em 0;
   -moz-align-items: center;
   -webkit-align-items: center;
@@ -3225,7 +3222,7 @@ table a {
 }
 #header input[type="checkbox"] + label,
 #header input[type="radio"] + label {
-  color: #d1e5f9;
+  color: rgb(208.75, 228.75, 248.5);
 }
 #header input[type="checkbox"] + label:before,
 #header input[type="radio"] + label:before {
@@ -3244,22 +3241,22 @@ table a {
   box-shadow: 0 0 0 1px #ffffff;
 }
 #header ::-webkit-input-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 #header :-moz-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 #header ::-moz-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 #header :-ms-input-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 #header .formerize-placeholder {
-  color: #b5d5f5 !important;
+  color: rgb(181, 213, 244.6) !important;
 }
 #header .icon {
-  color: #b5d5f5;
+  color: rgb(181, 213, 244.6);
 }
 #header .image {
   box-shadow:
@@ -3309,7 +3306,7 @@ table a {
 #header input,
 #header select,
 #header textarea {
-  color: #d1e5f9;
+  color: rgb(208.75, 228.75, 248.5);
 }
 #header a {
   color: inherit;
@@ -3448,7 +3445,6 @@ table a {
     overflow: hidden;
   }
 }
-
 @media screen and (max-width: 736px) {
   #header {
     background-image: url("images/overlay.png"), url("images/pattern-size3.svg");
@@ -3488,7 +3484,6 @@ table a {
     max-width: 60vw;
   }
 }
-
 @media screen and (max-width: 480px) and (orientation: landscape) {
   #header {
     padding: 2em 1.5em 0.1em 1.5em;
@@ -3505,7 +3500,6 @@ table a {
     padding: 2em 1em 0.1em 1em;
   }
 }
-
 body.is-mobile #header {
   background-attachment: scroll, scroll;
 }
@@ -3615,3 +3609,5 @@ body.is-preload #header .image img {
     padding: 3em 1.5em 1em 1.5em;
   }
 }
+
+/*# sourceMappingURL=main.css.map */

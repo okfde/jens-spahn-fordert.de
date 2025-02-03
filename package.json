@@ -1,0 +1,17 @@
+{
+  "name": "jens-spahn-fordert.de",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "build": "sass assets/sass/:assets/css/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "sass": "^1.83.4"
+  }
+}
