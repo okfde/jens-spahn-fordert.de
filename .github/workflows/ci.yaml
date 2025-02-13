@@ -1,0 +1,39 @@
+name: Lint & Build
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Setup Git
+        run: |
+          git config user.name "fdsbot"
+          git config user.email "119665132+fdsbot@users.noreply.github.com"
+      - name: Build & Format
+        run: pnpm build && pnpm format
+      - name: Commit
+        run: |
+          git add --all || true
+          git commit -m "[skipci] build and format" || true
+          git push
