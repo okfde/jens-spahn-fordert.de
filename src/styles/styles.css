@@ -22,11 +22,6 @@ tr > td:last-child {
   font-variant-numeric: tabular-nums;
 }
 
-thead {
-  border-bottom-style: solid;
-  border-bottom-width: (_size(border-width) * 2);
-}
-
 a:not(.btn) {
   @apply text-blue-600 hover:text-blue-700 underline;
 }
