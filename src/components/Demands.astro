@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+const demands = (await getCollection('demands')).map((d) => d.data);
+---
+
+<table class="max-w-[48rem]">
+  <tr>
+    <th>Forderung</th>
+    <th>Datum</th>
+  </tr>
+  {
+    demands.map((d) => (
+      <tr>
+        <td>
+          <a href={d.link} target="_blank" rel="norefferer">
+            {d.title}
+          </a>
+        </td>
+        <td>
+          {d.date.toLocaleDateString('de-DE', {
+            dateStyle: 'medium',
+          })}
+        </td>
+      </tr>
+    ))
+  }
+</table>

@@ -1,0 +1,118 @@
+---
+import '../styles/styles.css';
+import { Image } from 'astro:assets';
+import spahn from '../images/spahn.png';
+import Demands from '../components/Demands.astro';
+---
+
+<!doctype html>
+<html>
+  <head>
+    <title>Jens Spahn fordert</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta property="og:title" content="Jens Spahn fordert" />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:type" content="Aktuelle Forderungen von Jens Spahn." />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="bg-indigo-400 px-4 md:flex">
+      <div class="content-center flex-1">
+        <h1 class="text-5xl md:text-6xl font-extrabold py-12 text-white">
+          Jens Spahn fordert…
+        </h1>
+
+        <div class="md:flex">
+          <div class="bg-white border-indigo-600 border-2 p-4 flex-1">
+            <p class="text-lg">aktuell (28.06.2025):</p>
+            <p class="text-3xl font-bold text-indigo-800">
+              Atomwaffen für Deutschland
+            </p>
+          </div>
+          <svg
+            width="120"
+            height="144"
+            viewBox="0 0 120 144"
+            class="w-8 h-auto ms-12 md:ms-0"
+          >
+            <g>
+              <path
+                class="fill-indigo-600 md:fill-transparent"
+                d="M 128,0 V 140 L 0,0 Z"></path>
+              <path
+                class="fill-transparent md:fill-indigo-600"
+                d="M 0 0 V 135 L 100 64 Z"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <Image src={spahn} alt="" class="max-h-[32rem] w-auto" />
+      </div>
+    </header>
+
+    <!-- Forderungen -->
+    <section id="forderungen" class="px-4 mt-8 flex flex-col items-center">
+      <h2 class="text-xl font-bold mb-4">Jens Spahn fordert außerdem…</h2>
+
+      <Demands />
+    </section>
+
+    <!-- Kontakt -->
+    <section class="bg-indigo-100 py-8 px-4 my-8 text-center">
+      <h3 class="text-lg font-semibold">Weitere Forderungen?</h3>
+      <p>Schick uns eine Mail an info@fragdenstaat.de.</p>
+
+      <h3 class="text-lg font-semibold mt-4">Wider die Billig-PR!</h3>
+      <p>
+        Der Forderungsjournalismus muss sterben.
+        <a
+          href="https://uebermedien.de/95714/ich-fordere-der-forderungsjournalismus-muss-sterben/"
+          >Mehr Infos dazu hier.</a
+        >
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-4">
+      <div class="text-center my-8">
+        <p class="mb-2 text-lg">
+          Eine Seite von <a href="https://fragdenstaat.de">FragDenStaat</a>
+        </p>
+        <a
+          href="https://fragdenstaat.de/spenden/?pk_campaign=spahn"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded text-xl btn"
+        >
+          Jetzt spenden!
+        </a>
+      </div>
+
+      <div class="md:flex py-4 text-gray-800 border-t border-gray-200">
+        <div>
+          <p>
+            Foto Jens Spahn: bearbeitet nach
+            <a
+              href="https://commons.wikimedia.org/wiki/File:Jens_Spahn_CDU_Parteitag_2014_by_Olaf_Kosinsky-24.jpg"
+              >Olaf Kosinsky / Wikipedia</a
+            >,
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+              >CC-BY-SA 3.0 DE</a
+            >
+          </p>
+        </div>
+        <div class="md:ms-auto mt-2 md:mt-0">
+          <a href="https://fragdenstaat.de/impressum/">Impressum</a> /
+          <a href="https://fragdenstaat.de/datenschutzerklaerung/"
+            >Datenschutz</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

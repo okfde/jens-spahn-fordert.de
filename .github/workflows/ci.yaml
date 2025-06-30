@@ -1,4 +1,4 @@
-name: Lint & Build
+name: Pages
 
 on:
   push:
@@ -28,23 +28,14 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
-      - name: Setup Git
-        run: |
-          git config user.name "fdsbot"
-          git config user.email "119665132+fdsbot@users.noreply.github.com"
-      - name: Build & Format
-        run: pnpm build && pnpm format
-      - name: Commit
-        run: |
-          git add --all || true
-          git commit -m "[skipci] build and format" || true
-          git push
+      - name: Build
+        run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "format": "prettier --write .",
-    "build": "sass assets/sass/:assets/css/"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.10.1",
     "prettier": "^3.4.2",
-    "sass": "^1.83.4"
+    "sharp": "^0.34.2",
+    "tailwindcss": "^4.1.11"
   }
 }

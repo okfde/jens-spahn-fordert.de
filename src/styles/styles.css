@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+table {
+  @apply border-collapse w-full;
+}
+
+td,
+th {
+  @apply p-2;
+  @apply border border-gray-200;
+}
+
+th {
+  @apply font-semibold text-start;
+}
+
+tr:nth-child(even) {
+  @apply bg-indigo-50;
+}
+
+tr > td:last-child {
+  font-variant-numeric: tabular-nums;
+}
+
+thead {
+  border-bottom-style: solid;
+  border-bottom-width: (_size(border-width) * 2);
+}
+
+a:not(.btn) {
+  @apply text-blue-600 hover:text-blue-700 underline;
+}
