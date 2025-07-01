@@ -4,7 +4,7 @@ import { getSecret } from "astro:env/server";
 const demandSchema = z.object({
   title: z.string(),
   description: z.string().optional(),
-  date: z.date(),
+  date: z.string(),
   tags: z.array(z.string()),
   link: z.string(),
   id: z.string(),
@@ -27,7 +27,9 @@ const demands = defineCollection({
       .map((item: any) => ({
         title: item.demand,
         description: item.description ?? undefined,
-        date: new Date(item.date),
+        date: new Date(item.date).toLocaleDateString("de-DE", {
+          dateStyle: "medium",
+        }),
         tags: item._nc_m2m_Demands_Tags.map((tag: any) => tag.Tags.Title),
         link: item.link,
         id: item.Id.toString(),

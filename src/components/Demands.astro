@@ -17,11 +17,7 @@ const demands = (await getCollection('demands')).map((d) => d.data);
             {d.title}
           </a>
         </td>
-        <td>
-          {d.date.toLocaleDateString('de-DE', {
-            dateStyle: 'medium',
-          })}
-        </td>
+        <td>{d.date}</td>
       </tr>
     ))
   }

@@ -1,8 +1,12 @@
 ---
 import '../styles/styles.css';
+import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import spahn from '../images/spahn.png';
 import Demands from '../components/Demands.astro';
+
+const demands = (await getCollection('demands')).map((d) => d.data);
+const latestDemand = demands[0];
 ---
 
 <!doctype html>
@@ -32,9 +36,9 @@ import Demands from '../components/Demands.astro';
 
         <div class="md:flex">
           <div class="bg-white border-indigo-600 border-2 p-4 flex-1">
-            <p class="text-lg">aktuell (28.06.2025):</p>
+            <p class="text-lg">aktuell ({latestDemand.date}):</p>
             <p class="text-3xl font-bold text-indigo-800">
-              Atomwaffen für Deutschland
+              {latestDemand.title}
             </p>
           </div>
           <svg
@@ -62,7 +66,9 @@ import Demands from '../components/Demands.astro';
 
     <!-- Forderungen -->
     <section id="forderungen" class="px-4 mt-8 flex flex-col items-center">
-      <h2 class="text-xl font-bold mb-4">Jens Spahn fordert außerdem…</h2>
+      <h2 class="text-xl font-bold mb-4">
+        Jens Spahn hat {demands.length - 1} weitere Forderungen
+      </h2>
 
       <Demands />
     </section>
