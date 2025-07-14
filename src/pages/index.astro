@@ -28,39 +28,40 @@ const latestDemand = demands[0];
   </head>
   <body>
     <!-- Header -->
-    <header id="header" class="bg-indigo-400 px-4 md:flex">
-      <div class="content-center flex-1">
-        <h1 class="text-5xl md:text-6xl font-extrabold py-12 text-white">
-          Jens Spahn fordert…
-        </h1>
-
-        <div class="md:flex">
-          <div class="bg-white border-indigo-600 border-2 p-4 flex-1">
-            <p class="text-lg">aktuell ({latestDemand.date}):</p>
-            <p class="text-3xl font-bold text-indigo-800">
-              {latestDemand.title}
-            </p>
+    <header id="header" class="bg-indigo-400">
+      <div class="px-4 md:flex container mx-auto">
+        <div class="content-center flex-1">
+          <h1 class="text-5xl md:text-6xl font-extrabold py-12 text-white">
+            Jens Spahn fordert…
+          </h1>
+          <div class="md:flex">
+            <div class="bg-white border-indigo-600 border-2 p-4 flex-1">
+              <p class="text-lg">aktuell ({latestDemand.date}):</p>
+              <p class="text-3xl font-bold text-indigo-800">
+                {latestDemand.title}
+              </p>
+            </div>
+            <svg
+              width="120"
+              height="144"
+              viewBox="0 0 120 144"
+              class="w-8 h-auto ms-12 md:ms-0"
+            >
+              <g>
+                <path
+                  class="fill-indigo-600 md:fill-transparent"
+                  d="M 128,0 V 140 L 0,0 Z"></path>
+                <path
+                  class="fill-transparent md:fill-indigo-600"
+                  d="M 0 0 V 135 L 100 64 Z"></path>
+              </g>
+            </svg>
           </div>
-          <svg
-            width="120"
-            height="144"
-            viewBox="0 0 120 144"
-            class="w-8 h-auto ms-12 md:ms-0"
-          >
-            <g>
-              <path
-                class="fill-indigo-600 md:fill-transparent"
-                d="M 128,0 V 140 L 0,0 Z"></path>
-              <path
-                class="fill-transparent md:fill-indigo-600"
-                d="M 0 0 V 135 L 100 64 Z"></path>
-            </g>
-          </svg>
         </div>
-      </div>
 
-      <div>
-        <Image src={spahn} alt="" class="max-h-[32rem] w-auto" />
+        <div>
+          <Image src={spahn} alt="" class="max-h-[32rem] w-auto" />
+        </div>
       </div>
     </header>
 
